@@ -44,7 +44,7 @@ if (empty($_SESSION['usertypeu']))
                        <table>
                         <tr><td><input type="file" name="file" value="Capture"></td>
                               <td><input type="file" name="file1" value="Capture"></td>
-                              <td><input type="file" name="file2" value="Capture"></td>
+                              
                         
                               
 
@@ -75,7 +75,7 @@ if (empty($_SESSION['usertypeu']))
                                     <select name="sex">
                                           <option></option>
                                           <option>Male</option>
-                                          <option>Femal</option>
+                                          <option>Female</option>
                                     </select>
                               </td>
                         </tr>
@@ -115,11 +115,11 @@ if (empty($_SESSION['usertypeu']))
                         </tr>
                   </table> 
                   <input type="submit" name="btn" class="btn" value="Add"></center>
-                  </center>
+
                   
             	</form>
-            	
-            	
+
+                </center>
             	<?php
 
 
@@ -142,10 +142,10 @@ if (empty($_SESSION['usertypeu']))
             	                                   extract($_POST);
                                                  $image1=$_FILES["file"]["name"];
                                                  $image2=$_FILES["file1"]['name'];
-                                                 $image3=$_FILES["file2"]['name'];
+                                                 
             
             		require '../connect.php';
-            		$query=mysql_query("INSERT INTO `criminal` VALUES ('','$criminalIDno','$name','$nickname','$sex','$age','$occupation','$crimetype','$address','$wanted','$image1','$image2','$image3')");
+            		$query=mysql_query("INSERT INTO `criminal` VALUES ('','$criminalIDno','$name','$nickname','$sex','$age','$occupation','$crimetype','$address','$wanted','$image1','$image2')");
             		if (!empty($query)) {
             			echo "Criminal Succesiful Added<br>";
             		}
@@ -159,8 +159,7 @@ if (empty($_SESSION['usertypeu']))
       "../upload/" . $_FILES["file"]["name"]);
        move_uploaded_file($_FILES["file1"]["tmp_name"],
       "../upload/" . $_FILES["file1"]["name"]);
-        move_uploaded_file($_FILES["file2"]["tmp_name"],
-      "../upload/" . $_FILES["file2"]["name"]);
+        
 
       echo "";
       }
@@ -180,6 +179,7 @@ else
         </div>
 
 		<div class="footer">
+		<center>Nepal Police Academy</center>
 
 		</div>
 

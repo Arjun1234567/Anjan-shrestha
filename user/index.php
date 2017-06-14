@@ -111,9 +111,10 @@ if (empty($_SESSION['usertypeu']))
             
                    
 			<input type="submit" name="btn" class="btn" value="Add"></center>
-			</center>
+
             	</form>
-            	
+                </center>
+
             	
             	<?php
 
@@ -146,7 +147,7 @@ if (empty($_SESSION['usertypeu']))
         </div>
 
 		<div class="footer">
-
+<center>Nepal Police Academy</center>
 		</div>
 
 

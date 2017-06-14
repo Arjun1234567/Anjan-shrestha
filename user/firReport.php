@@ -23,7 +23,7 @@ if (empty($_SESSION['usertypeu']))
 
 		</div>
 
-		<div class="content">
+		<div>
 			<div class="menu">
 				<table class="table">
 					<tr>
@@ -37,7 +37,7 @@ if (empty($_SESSION['usertypeu']))
 					</tr>
 				</table>
             </div><hr>
-            <div class="area1">
+            <center class="area1">
             <center><u>Add First Information Report</u></center><br>
             	
             	<form action="firReport.php" method="POST" class="form1">
@@ -129,9 +129,10 @@ if (empty($_SESSION['usertypeu']))
                         </tr>
                   </table> <br>
                   <input type="submit" name="btn" class="btn" value="Add"></center>
-                  </center>
+
                   
             	</form>
+                </center>
             	
             	
             	<?php
@@ -139,19 +140,19 @@ if (empty($_SESSION['usertypeu']))
             	if (isset($btn)) {
             		require '../connect.php';
             		$date=date('Y.m.d');
-            		$query=mysql_query("INSERT INTO `fir` VALUES ('','$firno','cmtIDno','$date','$time','$address','$district','$choose','$place','$infotype','$info','$passportno','$policename','$recivedtime')");
+            		$query=mysql_query("INSERT INTO `fir` VALUES ('','$firno','$cmtIDno','$date','$time','$address','$district','$choose','$place','$infotype','$info','$passportno','$policename','$recivedtime')");
             		if (!empty($query)) 
                         {
-            			echo "FIR Succesiful Added<br>";
+            			echo "<center>FIR Succesiful Added</center>";
             		}
             		else	
             		{
             			echo mysql_error();
             		}
             	}
-                   elseif (isset($btn)&&empty($firno)||empty($date)||empty($time)||empty($address)||empty($district)||empty($choose)||empty($place)||empty($infotype)||empty($info)||empty($passportno)||empty($policename)||empty($recivedtime))
+                   elseif (isset($btn)&&empty($firno)||empty($cmtIDno)||empty($date)||empty($time)||empty($address)||empty($district)||empty($choose)||empty($place)||empty($infotype)||empty($info)||empty($passportno)||empty($policename)||empty($recivedtime))
                    {
-                       echo "all figure required";
+                       echo " <center>All fies should be required</center>";
                   }
                   
             	else
@@ -164,10 +165,9 @@ if (empty($_SESSION['usertypeu']))
             </div>
         </div>
 
-		<div class="footer">
-                  
-
-		</div>
+    <div class="footer">
+<center>Nepal Police Academy</center>
+    </div>
 
 
 

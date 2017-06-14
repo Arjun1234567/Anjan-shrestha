@@ -1,11 +1,5 @@
 <?php
-session_start();
-	if ($_SESSION['usertypea']) {
-		header("Location: ./admin");
-	}
-	else if ($_SESSION['usertypeu']) {
-		header("Location: ./user");
-	}
+
 ?>
 <html>
 <head>
@@ -26,7 +20,7 @@ session_start();
 			<center>
 				<form action="index.php" method="POST" class="form1"><br>
 					LOGIN <hr><br>
-				<input type="text" name="username" class="input" placeholder="Enter  Your  ID  Code"><br><br>
+				<input type="text" name="username" class="input" placeholder="Enter  Your  ID or Name"><br><br>
 				<input type="password" name="password" class="input"placeholder="Enter  Password"><br><br>
 				<input type="submit" name="btn" class="btn" value="Login"><br><br>
 			</form>
@@ -76,7 +70,7 @@ session_start();
 		</div>
 
 		<div class="footer">
-
+	<center>Nepal Police Academy</center>
 		</div>
 
 

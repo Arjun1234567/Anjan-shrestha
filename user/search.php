@@ -66,7 +66,7 @@ if (empty($_SESSION['usertypeu']))
         </div>
 
             <div class="footer">
-                  
+<center>Nepal Police Academy</center>
             </div>
 
 

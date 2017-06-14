@@ -166,7 +166,7 @@ else
         </div>
 
 		<div class="footer">
-
+<center>Nepal Police Academy</center>
 		</div>
 
 
